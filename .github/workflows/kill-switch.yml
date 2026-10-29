@@ -1,0 +1,40 @@
+name: Kill switch
+
+on:
+  workflow_dispatch:
+    inputs:
+      action:
+        description: "stop = disable the agent and cancel running runs; resume = turn it back on"
+        type: choice
+        options: [stop, resume]
+        default: stop
+
+permissions:
+  actions: write     # needed to disable a workflow and cancel runs
+  contents: read
+
+jobs:
+  kill-switch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      GH_TOKEN: ${{ github.token }}
+      WORKFLOW: agent-triage.lock.yml
+      ACTION: ${{ inputs.action }}
+    steps:
+      - name: Stop or resume the agent
+        run: |
+          set -euo pipefail
+          if [ "$ACTION" = "resume" ]; then
+            gh workflow enable "$WORKFLOW" --repo "$GITHUB_REPOSITORY"
+            echo "Agent workflow enabled."
+            exit 0
+          fi
+          gh workflow disable "$WORKFLOW" --repo "$GITHUB_REPOSITORY"
+          for status in in_progress queued; do
+            for id in $(gh run list --workflow "$WORKFLOW" --repo "$GITHUB_REPOSITORY" \
+                          --status "$status" --json databaseId --jq '.[].databaseId'); do
+              gh run cancel "$id" --repo "$GITHUB_REPOSITORY" || true
+            done
+          done
+          echo "Agent workflow disabled; running and queued runs cancelled."
