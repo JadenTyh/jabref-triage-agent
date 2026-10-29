@@ -1,0 +1,8 @@
+[
+  {"number": 1, "title": "Tooltip in groups panel shows heavy shadow",
+   "body": "### JabRef version\n\n6.0\n\nThe tooltip in the groups panel has a heavy shadow in the dark theme.",
+   "createdAt": "2026-01-01T00:00:00Z", "state": "OPEN"},
+  {"number": 2, "title": "Export to RIS erases existing output file",
+   "body": "Exporting to RIS overwrites the file with nothing.",
+   "createdAt": "2026-01-02T00:00:00Z", "state": "OPEN"}
+]
