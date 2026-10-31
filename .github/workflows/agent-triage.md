@@ -12,7 +12,7 @@ permissions:               # the agent job is read-only (no copilot-requests: th
 
 engine:
   id: copilot
-  # model: ...               # unset on purpose: Student plans may allow only automatic model selection
+  model: gpt-5-mini
   # version: "x.y.z"         # after the first run, pin the Copilot CLI version shown in the log
 
 tools:
