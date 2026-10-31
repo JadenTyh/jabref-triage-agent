@@ -1,0 +1,14 @@
+{
+  "case_id": "02-hayagriva-author-export",
+  "category": "clear core-library bug",
+  "comment": "none",
+  "labels_must_include": [
+    "component: export-or-save"
+  ],
+  "labels_allowed_extra": [],
+  "labels_forbidden": [],
+  "max_labels": 3,
+  "comment_must_link": [],
+  "must_not_close_anything": true,
+  "rationale": "Clear export bug. Maintainers used this same label. No comment needed."
+}

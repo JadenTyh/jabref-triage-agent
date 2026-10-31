@@ -1,0 +1,10 @@
+{
+  "WARNING": "Hindsight only. Never shown to the agent. Use it to decide expected.json.",
+  "labels_today": [
+    "component: fetcher"
+  ],
+  "state": "closed",
+  "state_reason": "completed",
+  "closed_at": "2026-08-04T18:49:11Z",
+  "comment_count": 2
+}

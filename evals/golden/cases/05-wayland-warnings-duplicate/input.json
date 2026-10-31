@@ -1,0 +1,11 @@
+{
+  "title": "Console warnings from Java FX under Wayland",
+  "body": "### JabRef version\n\nLatest development branch build (please note build date below)\n\n### Operating system\n\nGNU / Linux\n\n### Details on version and operating system\n\nLinux Mint Debian Edition 7, under Sway/Wayland\n\n### Checked with the [latest development build](https://builds.jabref.org/main/) (copy version output from About dialog)\n\n- [x] I made a backup of my libraries before testing the latest development version.\n- [x] I have tested the latest development version and the problem persists\n\n### Steps to reproduce the behaviour\n\n1. Start JR from the console\n2. Look at console\n\n(Wild guess: These warnings might be a result of my switch to the new graphics server ecosystem (i.e. Wayland and, in my case, Sway as the compositor/window manager). I don't know about how well the X-Wayland compatibility proxy, Java (FX) support, etc. already work at the Debian level. Ubuntu has switched to Wayland by default, so perhaps these issues are relevant.)\n\n\n### Appendix\n\n...\n<details>\n\n<summary>Log File</summary>\n\n```\nWARNING: Using incubator modules: jdk.incubator.vector\n2026-08-29 18:03:18 [main] org.jabref.Launcher.main()\nINFO: Starting JabRef v6.0-alpha.718--2026-08-29--a240ca4\nWARNING: Using incubator modules: jfx.incubator.richtext\nWARNING: Using incubator modules: jfx.incubator.input\n2026-08-29 18:03:21 [JavaFX Application Thread] com.dlsc.gemsfx.util.ResourceBundleManager.getString()\nWARN: Missing resource for bundle 'info-center-view', key 'accessible.role-description'. Falling back to 'notifications'.\n\n(JabRef:118171): Gdk-WARNING **: 18:03:23.163: XSetErrorHandler() called with a GDK error trap pushed. Don't do that.\n2026-08-29 18:03:24 [JavaFX Application Thread] org.apache.lucene.internal.vectorization.PanamaVectorizationProvider.<init>()\nINFO: Java vector incubator API enabled; uses preferredBitSize=256; FMA enabled\n```\n\n</details>\n",
+  "source": {
+    "repo": "JabRef/jabref",
+    "original_number": 16743,
+    "original_url": "https://github.com/JabRef/jabref/issues/16743",
+    "created_at": "2026-08-29T16:17:27Z",
+    "note": "Only title and body are replayed. Body is the CURRENT text and may have been edited after creation."
+  }
+}

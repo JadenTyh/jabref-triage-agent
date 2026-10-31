@@ -1,0 +1,17 @@
+{
+  "case_id": "06-jabkit-avoid-overwrite-lookalike",
+  "category": "look-alike, not duplicate",
+  "comment": "none",
+  "labels_must_include": [
+    "component: jabkit"
+  ],
+  "labels_allowed_extra": [],
+  "labels_forbidden": [],
+  "max_labels": 3,
+  "comment_must_link": [],
+  "must_not_close_anything": true,
+  "rationale": "Similar wording to #14707 (citation key configuration) but a different problem. The agent must not call it a duplicate.",
+  "comment_must_not_link": [
+    "#14707"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "case_id": "09-hayagriva-performance-crash",
+  "category": "several components",
+  "comment": "none",
+  "labels_must_include": [
+    "component: bib(la)tex",
+    "component: export-or-save"
+  ],
+  "labels_allowed_extra": [],
+  "labels_forbidden": [],
+  "max_labels": 3,
+  "comment_must_link": [],
+  "must_not_close_anything": true,
+  "rationale": "One crash touching two components. Maintainers used both labels."
+}

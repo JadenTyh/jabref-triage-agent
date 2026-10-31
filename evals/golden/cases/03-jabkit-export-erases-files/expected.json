@@ -1,0 +1,15 @@
+{
+  "case_id": "03-jabkit-export-erases-files",
+  "category": "jabkit CLI bug",
+  "comment": "none",
+  "labels_must_include": [
+    "component: jabkit",
+    "component: export-or-save"
+  ],
+  "labels_allowed_extra": [],
+  "labels_forbidden": [],
+  "max_labels": 3,
+  "comment_must_link": [],
+  "must_not_close_anything": true,
+  "rationale": "JabKit CLI export bug. Maintainers used both labels. The dev: labels are not allowed for the agent, so they are ignored."
+}

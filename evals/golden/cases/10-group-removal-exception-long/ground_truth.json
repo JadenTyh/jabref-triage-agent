@@ -1,0 +1,8 @@
+{
+  "WARNING": "Hindsight only. Never shown to the agent. Use it to decide expected.json.",
+  "labels_today": [],
+  "state": "closed",
+  "state_reason": "completed",
+  "closed_at": "2026-08-15T11:20:11Z",
+  "comment_count": 2
+}

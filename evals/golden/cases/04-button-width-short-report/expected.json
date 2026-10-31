@@ -1,0 +1,21 @@
+{
+  "case_id": "04-button-width-short-report",
+  "category": "bug missing information",
+  "comment": "expected",
+  "labels_must_include": [
+    "component: ui"
+  ],
+  "labels_allowed_extra": [
+    "component: preferences"
+  ],
+  "labels_forbidden": [],
+  "max_labels": 3,
+  "comment_must_link": [],
+  "must_not_close_anything": true,
+  "rationale": "The body is only a screenshot. The agent should label the UI component and ask once for version, OS and steps.",
+  "comment_should_mention": [
+    "version",
+    "operating system",
+    "steps to reproduce"
+  ]
+}

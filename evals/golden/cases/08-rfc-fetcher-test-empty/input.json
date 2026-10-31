@@ -1,0 +1,11 @@
+{
+  "title": "Fix RfcFetcherTest",
+  "body": "",
+  "source": {
+    "repo": "JabRef/jabref",
+    "original_number": 16480,
+    "original_url": "https://github.com/JabRef/jabref/issues/16480",
+    "created_at": "2026-08-03T19:50:30Z",
+    "note": "Only title and body are replayed. Body is the CURRENT text and may have been edited after creation."
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "WARNING": "Hindsight only. Never shown to the agent. Use it to decide expected.json.",
+  "labels_today": [
+    "status: depends-on-external"
+  ],
+  "state": "closed",
+  "state_reason": "completed",
+  "closed_at": "2026-08-29T16:25:14Z",
+  "comment_count": 3
+}

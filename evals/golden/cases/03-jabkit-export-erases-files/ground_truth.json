@@ -1,0 +1,14 @@
+{
+  "WARNING": "Hindsight only. Never shown to the agent. Use it to decide expected.json.",
+  "labels_today": [
+    "dev: build-system",
+    "component: jabkit",
+    "component: export-or-save",
+    "📌 Pinned",
+    "dev: distribution"
+  ],
+  "state": "closed",
+  "state_reason": "completed",
+  "closed_at": "2026-10-10T13:17:09Z",
+  "comment_count": 14
+}

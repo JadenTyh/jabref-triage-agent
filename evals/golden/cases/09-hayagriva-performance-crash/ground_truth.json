@@ -1,0 +1,12 @@
+{
+  "WARNING": "Hindsight only. Never shown to the agent. Use it to decide expected.json.",
+  "labels_today": [
+    "component: bib(la)tex",
+    "component: export-or-save",
+    "📍 Assigned"
+  ],
+  "state": "open",
+  "state_reason": null,
+  "closed_at": null,
+  "comment_count": 4
+}

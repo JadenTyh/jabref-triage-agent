@@ -1,0 +1,54 @@
+{
+  "repo": "JabRef/jabref",
+  "generated_at": "2026-10-25T06:36:22+00:00",
+  "window": {
+    "from": "2026-07-27",
+    "to": "2026-10-25",
+    "days": 90
+  },
+  "backlog": {
+    "open_issues": 447,
+    "open_needing_triage_label": 4,
+    "median_open_age_days": 1317,
+    "open_older_than_365d": 358,
+    "open_issues_fetched": 447
+  },
+  "new_issues": {
+    "created_in_window": 144,
+    "old_enough_for_response_metric": 139
+  },
+  "first_response_hours": {
+    "any_human_non_author": {
+      "answered": 120,
+      "median": 2.8,
+      "p90": 159.9,
+      "no_response_within_7d": 31
+    },
+    "maintainer_role": {
+      "answered": 115,
+      "median": 4.0,
+      "p90": 170.5,
+      "no_response_within_7d": 36
+    }
+  },
+  "duplicates": {
+    "marked_duplicate_in_window": 2,
+    "issues_in_window_with_duplicate_of_comment": 3,
+    "open_title_similarity_pairs_ge_0.6": 1,
+    "top_pairs_to_inspect_by_hand": [
+      {
+        "a": 4691,
+        "b": 4690,
+        "jaccard": 0.67
+      }
+    ]
+  },
+  "limitations": [
+    "First response = first comment by a non-author, non-bot account; labels/reactions/edits are ignored.",
+    "Median/p90 use answered issues only (survivorship bias): read the 'no response within 7d' counts too.",
+    "Maintainer role = GitHub author_association OWNER/MEMBER/COLLABORATOR; may miss maintainers with hidden membership.",
+    "Duplicates are only counted if someone marked them (state_reason/label) or wrote 'duplicate of'; unmarked duplicates are invisible.",
+    "Title-similarity pairs are a rough proxy; inspect the pairs by hand to estimate precision.",
+    "Search API returns at most 1000 results, so very large windows/backlogs are truncated."
+  ]
+}

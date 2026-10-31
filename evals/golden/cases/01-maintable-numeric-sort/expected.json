@@ -1,0 +1,14 @@
+{
+  "case_id": "01-maintable-numeric-sort",
+  "category": "clear GUI bug",
+  "comment": "none",
+  "labels_must_include": [
+    "component: maintable"
+  ],
+  "labels_allowed_extra": [],
+  "labels_forbidden": [],
+  "max_labels": 3,
+  "comment_must_link": [],
+  "must_not_close_anything": true,
+  "rationale": "Complete bug report about table column sorting. One clear component, nothing missing, so label only."
+}

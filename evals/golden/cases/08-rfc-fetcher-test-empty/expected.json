@@ -1,0 +1,14 @@
+{
+  "case_id": "08-rfc-fetcher-test-empty",
+  "category": "empty body",
+  "comment": "none",
+  "labels_must_include": [
+    "component: fetcher"
+  ],
+  "labels_allowed_extra": [],
+  "labels_forbidden": [],
+  "max_labels": 3,
+  "comment_must_link": [],
+  "must_not_close_anything": true,
+  "rationale": "Empty body, but it is a developer task about a test. Asking for the bug template would be noise. Label only."
+}

@@ -1,0 +1,18 @@
+{
+  "case_id": "07-citation-key-function-word",
+  "category": "feature request",
+  "comment": "expected",
+  "labels_must_include": [
+    "component: citationkey-generator"
+  ],
+  "labels_allowed_extra": [],
+  "labels_forbidden": [],
+  "max_labels": 3,
+  "comment_must_link": [],
+  "must_not_close_anything": true,
+  "rationale": "A small enhancement, not a bug. AGENTS.md says feature requests belong on Discourse, so the agent should say so politely and leave the decision to a maintainer. Maintainers kept it open, so this differs from hindsight on purpose.",
+  "comment_should_mention": [
+    "Discourse",
+    "feature request"
+  ]
+}

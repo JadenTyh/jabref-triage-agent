@@ -1,0 +1,11 @@
+{
+  "WARNING": "Hindsight only. Never shown to the agent. Use it to decide expected.json.",
+  "labels_today": [
+    "📍 Assigned",
+    "📌 Pinned"
+  ],
+  "state": "closed",
+  "state_reason": "completed",
+  "closed_at": "2026-10-31T13:07:54Z",
+  "comment_count": 14
+}

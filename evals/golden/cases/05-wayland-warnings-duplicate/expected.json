@@ -1,0 +1,14 @@
+{
+  "case_id": "05-wayland-warnings-duplicate",
+  "category": "true duplicate",
+  "comment": "expected",
+  "labels_must_include": [],
+  "labels_allowed_extra": [],
+  "labels_forbidden": [],
+  "max_labels": 3,
+  "comment_must_link": [
+    "#8780"
+  ],
+  "must_not_close_anything": true,
+  "rationale": "A maintainer confirmed it is a duplicate of #8780. The agent should link #8780. No label is required; any label it adds is reviewed by hand."
+}

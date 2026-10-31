@@ -1,0 +1,10 @@
+{
+  "WARNING": "Hindsight only. Never shown to the agent. Use it to decide expected.json.",
+  "labels_today": [
+    "component: export-or-save"
+  ],
+  "state": "closed",
+  "state_reason": "completed",
+  "closed_at": "2026-09-28T22:02:51Z",
+  "comment_count": 5
+}

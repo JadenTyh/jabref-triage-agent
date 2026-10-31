@@ -1,0 +1,11 @@
+{
+  "title": "JabKit ignores --avoid-overwrite when generating citation keys",
+  "body": "When running JabKit's `citationkeys generate` with `--avoid-overwrite`, entries that already have a citation key still receive a newly generated key. The flag should leave those keys unchanged and generate keys only for entries that have none.\n\nFor example, an entry with `MyStableKey` becomes `Smith2024` in the output. If that output is used as the document's bibliography, existing references such as `\\cite{MyStableKey}` no longer match.\n\n### Steps to reproduce\n\n1. Save this as `custom-key.bib`:\n\n```bibtex\n@Article{MyStableKey,\n  author = {Smith, Alice},\n  title = {Example study},\n  journal = {Example Journal},\n  year = {2024},\n  month = jan,\n}\n```\n\n2. Run:\n\n```sh\njabkit citationkeys generate custom-key.bib --porcelain \\\n  --pattern '[auth][year]' --avoid-overwrite --output result.bib\n```\n\n3. Inspect the citation key in `result.bib`.\n\n**Expected:** The output entry keeps `MyStableKey`.\n\n**Actual:** The output entry has `Smith2024`, and the command exits with code `0`. The original input file remains unchanged; the issue is the existing key being replaced in the generated output despite `--avoid-overwrite`.\n\n### Environment\n\nJabKit portable development build `6.0-beta.190--2026-10-12--c8ddc2c`, macOS 26.5.2 ARM64. Tested with a disposable bibliography and isolated preferences.\n\n### Screenshots\n\nInput and generated output, viewed in JabRef:\n\n<img width=\"257\" height=\"148\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/57e8e184-faa2-4151-87de-38c03f401ce0\" />\n<img width=\"277\" height=\"144\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/5da31d35-21a3-4477-8b5d-a8cba65d2ca5\" />",
+  "source": {
+    "repo": "JabRef/jabref",
+    "original_number": 17458,
+    "original_url": "https://github.com/JabRef/jabref/issues/17458",
+    "created_at": "2026-10-13T05:38:03Z",
+    "note": "Only title and body are replayed. Body is the CURRENT text and may have been edited after creation."
+  }
+}

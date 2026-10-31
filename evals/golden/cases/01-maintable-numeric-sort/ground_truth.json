@@ -1,0 +1,11 @@
+{
+  "WARNING": "Hindsight only. Never shown to the agent. Use it to decide expected.json.",
+  "labels_today": [
+    "component: maintable",
+    "good first issue"
+  ],
+  "state": "closed",
+  "state_reason": "completed",
+  "closed_at": "2026-10-14T17:57:00Z",
+  "comment_count": 5
+}

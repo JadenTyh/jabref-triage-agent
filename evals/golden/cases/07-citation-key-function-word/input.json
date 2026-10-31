@@ -1,0 +1,11 @@
+{
+  "title": "Add \"as\" to the list of function words for citation key generation",
+  "body": "<!--\nPlease use the GitHub issue tracker only for bug reports and smaller suggestions for improvements.\nRequests for completely new features, questions and general feedback is now handled at https://discourse.jabref.org.\nThanks!\n-->\n\n**Is your suggestion for improvement related to a problem? Please describe.**\nJabRef's documented list of function words excludes `as`, although it is commonly classified as a function word in English.\n\nExample using `[shorttitle:lower]` to generate a citation key:\n\n- Titel: `Economic Systems as Networks`\n- Current: `economicsystemsas`\n\n**Describe the solution you'd like**\nThe word `as` should be added to the list of ignored function words.\n\n- Titel: `Economic Systems as Networks`\n- Proposed `[shorttitle:lower]` citation key: `economicsystemsnetworks` \n",
+  "source": {
+    "repo": "JabRef/jabref",
+    "original_number": 17523,
+    "original_url": "https://github.com/JabRef/jabref/issues/17523",
+    "created_at": "2026-10-20T14:22:35Z",
+    "note": "Only title and body are replayed. Body is the CURRENT text and may have been edited after creation."
+  }
+}

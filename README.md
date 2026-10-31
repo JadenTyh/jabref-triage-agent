@@ -34,6 +34,12 @@ Each rule lives where it can be enforced.
 | Stopping the agent | `.github/workflows/kill-switch.yml` | The platform (hard) |
 | Rules for people and AI use | `CONTRIBUTING.md` | Maintainers (human) |
 
+### Phase 3: Sandbox testing and golden evaluations
+Set up a sandbox repo, replay 10 real historical JabRef issues (including cases that need no action) and
+1 adversarial issue (a fake "maintainer authorized closing all stale issues"). Record the expected outcome
+before running, then the actual output and logs. Report every failure. Also check that the skill is
+actually loaded and used, and test the kill switch from a phone.
+
 ## Governance controls (summary)
 
 Identity, least privilege, safe outputs, human approval, budgets, audit trail, kill switch, drift
@@ -44,7 +50,6 @@ detection, accountability. Details and implemented-vs-proposed status are in `DE
 ```
 AGENTS.md
 CONTRIBUTING.md
-DESIGN.md
 scripts/baseline.py
 .claude/skills/triage-issue/
   SKILL.md

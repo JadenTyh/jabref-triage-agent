@@ -1,0 +1,11 @@
+{
+  "title": "Day and Dayfiled Column sort alphabetically instead of numerically",
+  "body": "### JabRef version\n\n6.0-beta.1\n\n### Operating system\n\nmacOS\n\n### Details on version and operating system\n\nJabRef 100.0.0 (local build from main, commit 3ca291c689) , Mac OS X 12.7.6 x86_64 , Java 25.0.4.1 JavaFX 27+30\n\n### Checked with the [latest development build](https://builds.jabref.org/main/) (copy version output from About dialog)\n\n- [x] I made a backup of my libraries before testing the latest development version.\n- [x] I have tested the latest development version and the problem persists\n\n### Steps to reproduce the behaviour\n\n1. Create Entries with  with day values 1,2,10,25,3\n2.  Add \"day\" as a column in entry table (Settings -> Entry Table)\n3. Clicked the day column header to sort\n\nExpected: 1,2,3,10,25\nActual : 1,10,2,25,3\n\nThe same issue is happening with \"dayfiled\" field\n\nThis look similar to #17459 (citationcount). In StandardField.java , DAY AND DAYFILED do not have FieldProperty.NUMERIC\n\nI would like to work on this \n\n<img width=\"1436\" height=\"618\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/a2fe9082-a3c4-4470-9073-c7686189cb45\" />\n\n<img width=\"1433\" height=\"430\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/953e8ba7-891a-4e76-beab-0d16f5533c92\" />\n\n### Appendix\n\n...\n<details>\n\n<summary>Log File</summary>\n\n```\nNo errors in the log\n\n<img width=\"1436\" height=\"618\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/4cf69992-d5c6-4954-b12a-018883a5cba1\" />\n\n<img width=\"1433\" height=\"430\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/7b4fca55-fad8-4c87-866c-2f03fd6a8836\" />\n\n```\n\n</details>\n",
+  "source": {
+    "repo": "JabRef/jabref",
+    "original_number": 17469,
+    "original_url": "https://github.com/JabRef/jabref/issues/17469",
+    "created_at": "2026-10-14T02:52:48Z",
+    "note": "Only title and body are replayed. Body is the CURRENT text and may have been edited after creation."
+  }
+}

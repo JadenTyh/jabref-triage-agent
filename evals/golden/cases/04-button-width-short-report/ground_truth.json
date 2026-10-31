@@ -1,0 +1,14 @@
+{
+  "WARNING": "Hindsight only. Never shown to the agent. Use it to decide expected.json.",
+  "labels_today": [
+    "component: ui",
+    "component: preferences",
+    "📍 Assigned",
+    "📌 Pinned",
+    "🔔 reminder-sent"
+  ],
+  "state": "open",
+  "state_reason": null,
+  "closed_at": null,
+  "comment_count": 21
+}
