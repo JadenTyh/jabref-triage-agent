@@ -12,9 +12,9 @@ issues-index.json: gh issue list -R JabRef/jabref --state all --limit 1000 \
 """
 import argparse, json, math, re
 from collections import Counter
-from nltk.corpus import stopwords
 
-stop_words = set(stopwords.words("english"))
+# Fixed list on purpose: no outside packages exist on the GitHub runner.
+stop_words = {"about", "above", "after", "again", "against", "all", "also", "and", "any", "are", "because", "been", "before", "being", "below", "between", "both", "but", "can", "could", "did", "does", "doing", "don", "down", "during", "each", "few", "for", "from", "further", "has", "have", "having", "her", "here", "herself", "him", "himself", "his", "how", "into", "its", "itself", "jabref", "just", "more", "most", "myself", "nor", "not", "now", "off", "once", "only", "other", "our", "ourselves", "out", "over", "own", "response", "same", "she", "should", "some", "such", "than", "that", "the", "their", "them", "themselves", "then", "there", "these", "they", "this", "those", "through", "too", "under", "until", "very", "was", "were", "what", "when", "which", "while", "who", "whom", "why", "will", "with", "would", "you", "your", "yours", "yourself"}
 
 def clean_body(body):
     """Drop form headings and checkbox lines, which are identical in every bug report."""
