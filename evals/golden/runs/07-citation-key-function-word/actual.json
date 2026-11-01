@@ -1,0 +1,15 @@
+{
+  "labels": [
+    "component: citationkey-generator"
+  ],
+  "comment": "🤖 *Automated first-pass triage (AI-generated, not yet reviewed by a maintainer).*\n\nThis looks like a feature request or suggestion for changed behaviour. Such requests are usually discussed at https://discourse.jabref.org, and a maintainer will decide where this one belongs.\n\nSuggested labels: component: citationkey-generator\n\nA maintainer will make the final call.",
+  "tool_calls": [
+    "Read .claude/skills/triage-issue/SKILL.md",
+    "cat .claude/skills/triage-issue/allowed-labels.txt | head -100",
+    "cat .claude/skills/triage-issue/reference/comment-template.md",
+    "python3 .claude/skills/triage-issue/scripts/validate_labels.py --allowed .claude/skills/triage-issue/allowed-labels.txt \"component: citationkey-generator\"",
+    "Write <scratchpad>/issue.json",
+    "python3 .claude/skills/triage-issue/scripts/dedup.py --index .claude/skills/triage-issue/issues-index.json --issue-file <scratchpad>/issue.json --top 3"
+  ],
+  "notes": ""
+}

@@ -1,0 +1,5 @@
+1:23 AM
+The report is complete: it has the version, OS, steps to reproduce and a log. dedup.py returned no candidates, so I'd post no comment. The crash comes from the group-removal path (GroupTreeViewModel.removeSelectedEntries, WordKeywordGroup.remove), so I'd apply only component: groups.
+
+
+{"labels": ["component: groups"], "comment": null}

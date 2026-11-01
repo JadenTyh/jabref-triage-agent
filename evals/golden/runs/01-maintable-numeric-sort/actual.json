@@ -1,0 +1,15 @@
+{
+  "labels": [
+    "component: maintable"
+  ],
+  "comment": "🤖 *Automated first-pass triage (AI-generated, not yet reviewed by a maintainer).*\n\n**Possibly related issues**: this may be similar to an earlier report about another field sorting alphabetically instead of numerically:\n- https://github.com/JabRef/jabref/issues/12533\n\n**Suggested labels**: component: maintable\n\nA maintainer will make the final call.",
+  "tool_calls": [
+    "Skill triage-issue",
+    "Read  .claude/skills/triage-issue/SKILL.md",
+    "Write /tmp/issue.json",
+    "Read  .claude/skills/triage-issue/reference/comment-template.md",
+    "python3 .claude/skills/triage-issue/scripts/dedup.py --index .claude/skills/triage-issue/issues-index.json --issue-file /tmp/issue.json --top 3",
+    "python3 .claude/skills/triage-issue/scripts/validate_labels.py --allowed .claude/skills/triage-issue/allowed-labels.txt \"component: maintable\""
+  ],
+  "notes": ""
+}

@@ -1,3 +1,6 @@
 .venv/
 
+.env.DS_Store
 .env
+ToDo.txt
+.DS_Store

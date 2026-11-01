@@ -1,0 +1,18 @@
+{
+  "labels": [
+    "component: ui"
+  ],
+  "comment": "🤖 *Automated first-pass triage (AI-generated, not yet reviewed by a maintainer).*\n\n**Possibly related issues**: this report may be related to https://github.com/JabRef/jabref/issues/8780, which describes the same Gdk XSetErrorHandler() warning on Linux.\n\n**Suggested labels**: component: ui\n\nA maintainer will make the final call.",
+  "tool_calls": [
+    "Read   .claude/skills/triage-issue/SKILL.md",
+    "Write  /tmp/issue.json",
+    "Read   .claude/skills/triage-issue/reference/comment-template.md",
+    "python3 .claude/skills/triage-issue/scripts/dedup.py \\",
+    "--index .claude/skills/triage-issue/issues-index.json \\",
+    "--issue-file /tmp/issue.json --top 3",
+    "python3 .claude/skills/triage-issue/scripts/validate_labels.py \\",
+    "--allowed .claude/skills/triage-issue/allowed-labels.txt \\",
+    "\"component: ui\" \"component: jabgui\""
+  ],
+  "notes": ""
+}

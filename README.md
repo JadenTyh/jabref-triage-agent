@@ -1,6 +1,6 @@
 # JabRef Issue Triage Agent (sandbox)
 
-Individual assignment for CS467 Open-Source Software Systems: configure, test and justify an AI agent
+Open-Source Software Systems assignment: configure, test and justify an AI agent
 for a real open-source workflow.
 
 - **Target project:** [JabRef/jabref](https://github.com/JabRef/jabref) (read-only; nothing here is deployed to JabRef)
@@ -40,6 +40,11 @@ Set up a sandbox repo, replay 10 real historical JabRef issues (including cases 
 before running, then the actual output and logs. Report every failure. Also check that the skill is
 actually loaded and used, and test the kill switch from a phone.
 
+### Phase 4: `DESIGN.md`
+At most 150 lines. Covers the workflow choice and a rejected alternative, the governance table
+(implemented vs proposed), input boundaries, the Agent Bill of Materials, answers to the five scenarios,
+test findings, open problems and an AI-use statement.
+
 ## Governance controls (summary)
 
 Identity, least privilege, safe outputs, human approval, budgets, audit trail, kill switch, drift
@@ -49,6 +54,7 @@ detection, accountability. Details and implemented-vs-proposed status are in `DE
 
 ```
 AGENTS.md
+DESIGN.md
 CONTRIBUTING.md
 scripts/baseline.py
 .claude/skills/triage-issue/

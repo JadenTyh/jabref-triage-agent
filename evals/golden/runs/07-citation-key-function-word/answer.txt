@@ -1,0 +1,4 @@
+This is a small request to change existing behaviour, so I classed it as a feature request. By step 5(c) of the skill it gets a Discourse pointer. dedup.py found no related issues. The label component: citationkey-generator passed validate_labels.py.
+
+
+{"labels": ["component: citationkey-generator"], "comment": "🤖 *Automated first-pass triage (AI-generated, not yet reviewed by a maintainer).*\n\nThis looks like a feature request or suggestion for changed behaviour. Such requests are usually discussed at https://discourse.jabref.org, and a maintainer will decide where this one belongs.\n\nSuggested labels: component: citationkey-generator\n\nA maintainer will make the final call."}

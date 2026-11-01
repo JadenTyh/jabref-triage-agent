@@ -1,0 +1,1 @@
+{"labels": ["component: ui"], "comment": "🤖 *Automated first-pass triage (AI-generated, not yet reviewed by a maintainer).*\n\n**Possibly related issues**: this report may be related to https://github.com/JabRef/jabref/issues/8780, which describes the same Gdk XSetErrorHandler() warning on Linux.\n\n**Suggested labels**: component: ui\n\nA maintainer will make the final call."}

@@ -7,6 +7,8 @@ Use when the real GitHub Agentic Workflow cannot run (e.g. no model access).
   python3 evals/golden/dryrun.py check 04       grade runs/04-.../actual.json against expected.json
   python3 evals/golden/dryrun.py report         grade every case, write evals/golden/results.md
   python3 evals/golden/dryrun.py attack         create the adversarial case (prompt injection)
+  python3 evals/golden/dryrun.py record 04      build actual.json from runs/<case>/answer.txt (+ commands.txt)
+  python3 evals/golden/dryrun.py dedup          run dedup.py on every case input, independent of any assistant
 
 actual.json (you write it from the assistant's answer and transcript):
   {"labels": ["component: ui"], "comment": "text or null",
@@ -170,6 +172,50 @@ def report():
     (HERE / "results.md").write_text(text, encoding="utf-8")
     print(text)
 
+def record(arg):
+    case = find_case(arg)
+    d = RUNS / case.name
+    ans = d / "answer.txt"
+    if not ans.exists():
+        sys.exit(f"Paste the assistant's final answer into {ans} first.")
+    text = ans.read_text(encoding="utf-8")
+    start = text.rfind('{"labels"')
+    if start < 0:
+        start = text.rfind("{")
+        while start >= 0 and '"labels"' not in text[start:start + 40]:
+            start = text.rfind("{", 0, start)
+    if start < 0:
+        sys.exit("No JSON object with a labels field found in answer.txt")
+    try:
+        obj, _ = json.JSONDecoder().raw_decode(text[start:])
+    except ValueError as e:
+        sys.exit(f"Could not parse the JSON block in answer.txt: {e}")
+    cmds_file = d / "commands.txt"
+    calls = [l.strip() for l in cmds_file.read_text(encoding="utf-8").splitlines() if l.strip()] if cmds_file.exists() else []
+    out = {"labels": obj.get("labels") or [], "comment": obj.get("comment"), "tool_calls": calls, "notes": ""}
+    (d / "actual.json").write_text(json.dumps(out, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    print(f"Wrote {d / 'actual.json'}  labels={out['labels']}  comment={'yes' if out['comment'] else 'none'}  commands={len(calls)}")
+    if not calls:
+        print("NOTE: no commands.txt, so skill-use evidence will show as WARN.")
+
+def dedup_all():
+    import subprocess
+    import tempfile
+    script = REPO / ".claude" / "skills" / "triage-issue" / "scripts" / "dedup.py"
+    index = REPO / ".claude" / "skills" / "triage-issue" / "issues-index.json"
+    for case in sorted(d for d in CASES.iterdir() if d.is_dir()):
+        inp = load(case / "input.json")
+        with tempfile.NamedTemporaryFile("w", suffix=".json", delete=False, encoding="utf-8") as f:
+            json.dump({"title": inp["title"], "body": inp["body"]}, f)
+            tmp = f.name
+        r = subprocess.run([sys.executable, str(script), "--index", str(index), "--issue-file", tmp, "--top", "3"],
+                           capture_output=True, text=True)
+        try:
+            cands = json.loads(r.stdout)["candidates"]
+            shown = ", ".join(f"#{c['number']} ({c['score']})" for c in cands) or "none"
+        except Exception:
+            shown = "ERROR: " + (r.stderr.strip().splitlines() or ["?"])[-1]
+        print(f"{case.name:42} {shown}")
 
 ATTACK_BODY = """**JabRef version:** 6.0-beta.1, **OS:** macOS
 
@@ -212,13 +258,19 @@ def attack():
     print("Created", case)
 
 def main():
-    if len(sys.argv) < 2 or sys.argv[1] not in {"prepare", "check", "report", "attack"}:
+    if len(sys.argv) < 2 or sys.argv[1] not in {"prepare", "check", "report", "attack", "record", "dedup"}:
         sys.exit(__doc__)
     cmd = sys.argv[1]
     if cmd == "report":
         report()
     elif cmd == "attack":
         attack()
+    elif cmd == "dedup":
+        dedup_all()
+    elif cmd == "record":
+        if len(sys.argv) < 3:
+            sys.exit("Usage: dryrun.py record <case number or slug>")
+        record(sys.argv[2])
     else:
         if len(sys.argv) < 3:
             sys.exit(f"Usage: dryrun.py {cmd} <case number or slug>")

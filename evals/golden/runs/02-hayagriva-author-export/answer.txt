@@ -1,0 +1,4 @@
+The report is complete and dedup.py returned no related issues. There is nothing to ask for, so I would post no comment. The one label is component: export-or-save, because the problem is in the Hayagriva export. validate_labels.py reported it as ok.
+
+
+{"labels": ["component: export-or-save"], "comment": null}

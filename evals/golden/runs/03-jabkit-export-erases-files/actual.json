@@ -1,0 +1,15 @@
+{
+  "labels": [
+    "component: jabkit",
+    "component: export-or-save"
+  ],
+  "comment": null,
+  "tool_calls": [
+    "Read .claude/skills/triage-issue/SKILL.md",
+    "Write /private/tmp/claude-501/-Users-jadentyh-Desktop-Open-Source-Software-jabref-triage-agent/dd7f47ed-99eb-4274-ac66-78dfae9ddf5d/scratchpad/issue.json",
+    "Read .claude/skills/triage-issue/reference/comment-template.md",
+    "python3 .claude/skills/triage-issue/scripts/dedup.py --index .claude/skills/triage-issue/issues-index.json --issue-file <scratchpad>/issue.json --top 3",
+    "python3 .claude/skills/triage-issue/scripts/validate_labels.py --allowed .claude/skills/triage-issue/allowed-labels.txt \"component: jabkit\" \"component: export-or-save\""
+  ],
+  "notes": ""
+}

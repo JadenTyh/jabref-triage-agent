@@ -1,0 +1,4 @@
+This is a developer task: a test to fix, with an empty body. The RfcFetcherTest name points to the fetcher component. validate_labels.py accepted component: fetcher. dedup.py found no related issues, so I'd post no comment. Developer tasks don't get bug-report questions, and the label stands on its own.
+
+
+{"labels": ["component: fetcher"], "comment": null}

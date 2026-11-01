@@ -1,0 +1,4 @@
+The report is complete, and the one dedup candidate (#14707, configuring citation key patterns at the CLI) is a different problem. I would post no comment.
+
+
+{"labels": ["component: jabkit", "component: citationkey-generator"], "comment": null}

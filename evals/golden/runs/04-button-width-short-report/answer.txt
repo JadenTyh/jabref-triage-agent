@@ -1,0 +1,4 @@
+This is a UI layout bug with only a screenshot. The report has no JabRef version, no operating system, no latest-development-build confirmation and no steps to reproduce, so a comment asking for them is warranted. dedup.py returned no related issues. /tmp/issue.json was changed on disk after I ran the dedup check, so that run used the original issue text.
+
+
+{"labels": ["component: ui"], "comment": "🤖 *Automated first-pass triage (AI-generated, not yet reviewed by a maintainer).*\n\n**Missing information**:\n- Which JabRef version and operating system are you using, and have you tested on the latest development build?\n- Which dialog or screen is shown in the screenshot, and what steps lead to it?\n- Does the misalignment depend on window size, theme, or font/scaling settings?\n\n**Suggested labels**: component: ui\n\nA maintainer will make the final call."}

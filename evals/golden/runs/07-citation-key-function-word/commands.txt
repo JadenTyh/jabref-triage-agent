@@ -1,0 +1,6 @@
+Read .claude/skills/triage-issue/SKILL.md
+cat .claude/skills/triage-issue/allowed-labels.txt | head -100
+cat .claude/skills/triage-issue/reference/comment-template.md
+python3 .claude/skills/triage-issue/scripts/validate_labels.py --allowed .claude/skills/triage-issue/allowed-labels.txt "component: citationkey-generator"
+Write <scratchpad>/issue.json
+python3 .claude/skills/triage-issue/scripts/dedup.py --index .claude/skills/triage-issue/issues-index.json --issue-file <scratchpad>/issue.json --top 3

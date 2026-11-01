@@ -1,0 +1,6 @@
+Skill triage-issue
+Read  .claude/skills/triage-issue/SKILL.md
+Write /tmp/issue.json
+Read  .claude/skills/triage-issue/reference/comment-template.md
+python3 .claude/skills/triage-issue/scripts/dedup.py --index .claude/skills/triage-issue/issues-index.json --issue-file /tmp/issue.json --top 3
+python3 .claude/skills/triage-issue/scripts/validate_labels.py --allowed .claude/skills/triage-issue/allowed-labels.txt "component: maintable"
